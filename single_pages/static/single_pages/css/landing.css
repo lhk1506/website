@@ -1,0 +1,12 @@
+body{
+
+background:url('/static/single_pages/images/img1.jpg') no-repeat center center fixed;
+}
+
+section{
+margin-bottom: 100px;
+}
+
+.card{
+background-color: rgba(25,25,25,0.6);
+}

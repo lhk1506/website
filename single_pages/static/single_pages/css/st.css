@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+:root{
+    --light-blue:#4db2ec7a;
+    --blue:#1665cc69;
+    --purple : #b473bf7e;
+    --light-purple : #e3bbeb69;
+    --pink : #df3e5e88;
+    --orange:#ff9f6780;
+    --yellow:#ffd57379;
+    --light-green:#a2e29b6e;
+    --green:#00af3a83;
+    --light-grey:#666;
+    --grey:#333;
+    --white:#FFF;
+    --background:#d7fabac7;
+}
+
+*{
+    margin: 0;/* 마진값 초기화 */
+    padding: 0;/* 패딩값 초기화 */
+    box-sizing:  border-box;/* 박스영역은 테두리까지 지정 */
+}
+
+html{
+    font-size:100%;
+    scroll-behavior: smooth;
+}
+body{
+    color: var(--white);
+    font-family: sans-serif;
+    background-color: var(--background);
+}
+body>div{
+    padding-top: 100px;
+}
+p{
+    line-height: 1.7;
+}
+a{
+    color:var(--white);
+    text-decoration: none;
+    outline: none;
+}
+img{
+    max-width: 80%;
+}
+video{
+    max-width: 70%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+ul{
+    list-style: none;
+}
+li{
+    list-style: none;
+}
+#main h2,#Profile h2,#Program h2,#Work h2{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+#Work h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+header,h1,h2,h3,.main-text{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.wrapper{
+    max-width: 100%;
+    width: 1440px;
+    margin: 0 auto;
+    padding:0 1rem ;
+}
+#logo{
+    float: left;/*왼쪽으로 플로팅 */
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+}
+#logo h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 -1px 0 #222;
+}
+
+.main-nav {
+    height: 60px;
+}
+.main-nav>li{
+    float: left;/* 메뉴항목을 왼쪽으로 플로팅 */
+}
+.main-nav>li>a{
+    display: block;/* 링크택스트 블록처리 */
+    color: #fff;
+    font-weight: 600;
+
+    padding: 20px 60px;
+    
+}
+.main-nav>li>a>span{
+    font-size: 0.4em;
+    
+}
+
+.main-nav>li:hover>ul{
+    display: block;/* 메인메뉴 항목위로 오버하면 서브메뉴표시 */
+    z-index: 10;/* 슬라이드쇼에 가리지 않게 조절 */
+    
+}
+
+.main-nav > li{
+    float: left;/* 메뉴항목 왼쪽으로 플로팅 */
+    position: relative;/* 서브메뉴를 absolute로 만들기위해서 부모요소를 relative로 지정 */
+}
+.main-nav > li>ul{
+    display: none;
+    position: absolute;
+    width: 200px;
+    
+    left: -25px;
+    margin: 0;
+}
+
+.main-nav>li>ul>li{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 15px 10px 20px;/* 서브메뉴항목지정 */
+}
+
+.main-nav>li>ul>li>a{
+    font-size: 14px;
+    padding: 10px;
+    color: #fff;
+}
+
+
+/* main */
+#main p {
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+#main h1{
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(var(--light-grey),var(--white));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color : transparent;
+}
+
+.main-text{
+    text-align: center;
+    border-top: 3px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#Profile{
+    padding: 4rem 1rem;
+}
+
+#Profile td>p{
+    font-size: 1.2rem;
+    color:var(--grey);
+    margin-left: 10px;
+    text-align:left;
+    width: 570px;
+}
+
+#Profile img{
+    display: block;
+    width: 500px;
+    margin-left:100px;
+    
+}
+
+#Profile h2{
+    background: linear-gradient(var(--white),var(--orange));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color : transparent;
+}
+
+#Profile p{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#Program{
+    padding: 7rem 0;
+}
+
+#Program h2{
+    background: linear-gradient(var(--purple),var(--white));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color : transparent;   
+}
+table.program-table{
+    text-align: left;
+    margin-left: 10rem;
+    line-height: 1.5;
+    border-spacing: 1px;
+    border-top: 1px solid var(--white);
+}
+.program-table th{
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid var(--white);
+}
+.program-table td{
+    width: 35em;
+    padding: 10px;
+    border-bottom: 1px solid var(--white);    
+    
+}
+.program-lang{
+    font-size: 1rem;
+    padding-top: 1rem;
+    color : var(--white)
+    
+}
+.program-content{
+    font-size: 1rem;
+    padding-top: 1rem;
+    color : var(--white);
+}
+
+.sidenav {
+    width: 130px;
+    height: 100%;
+    position: fixed;
+    z-index:1;
+    top: 56px;
+
+    background: #121212;
+    overflow-x: hidden;
+    padding: 20px 0;
+}
+
+.sidenav a {
+padding: 6px 8px 6px 16px;
+text-decoration: none;
+font-size: 15px;
+display: block;
+}
+
+.sidenav a:hover {
+color: #064579;
+}
+
+.main {
+margin-left: 140px; /* Same width as the sidebar + left position in px */
+font-size: 28px; /* Increased text to enable scrolling */
+padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+.main-nav{
+    width: 100%;
+    position: static;
+    display: flex;
+}
+.main-nav li {
+    margin: 0 0 0 1.5rem;
+    display: block;
+}
+a:hover{
+    color:var(--yellow)
+}
+
+header > h2{
+    margin-left: 20px;
+}
+
+header > nav {
+    width: 600px;
+    height: 100%;
+}
+
+header ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul > li{
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#Work video{
+    display: block;
+    margin: auto;
+}
+#Work h2{
+    background: linear-gradient(var(--yellow),var(--white));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color : transparent;
+}
+#Work div{
+    margin-top: 5rem;
+}
+#Work div>h3{
+    margin-top: 2rem;
+    color:var(--white)
+}
+#Work p{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.footer{
+    border-top: 3px solid rgba(16, 48, 230, 0.5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: .875rem;
+    color: var(--grey);
+}
+
+.footer a{
+    margin-bottom: auto;
+    text-decoration: none;
+}
+
+.goTop a>span{
+    font-size: 0.5rem;
+}
+
+.goTop{  
+    text-decoration-line: none;
+    text-decoration-color: var(--white);
+    position: fixed;
+    bottom: 20px;
+    right :20px;
+}
+

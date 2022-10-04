@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>intro Meckki</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/landing.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/st.css' %}" media="screen">
+
+    <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+</head>
+<body class="pt-5">
+    <div class="sidenav">
+        <a href="#Program" class="text-light">Program language</a>
+        <a href="#Work-python" class="text-light">Python Work</a>
+        <a href="#Work-pygame" class="text-light">Pygame Work</a>
+        <a href="#Work-html" class="text-light"> Html Work</a>
+        <a href="#Work-unity" class="text-light"> Unity Work</a>
+      </div>
+      
+    {% include 'blog/navbar.html' %}
+    <section>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="ml-3 col-lg-6 text-light">
+                    &nbsp;&nbsp;&nbsp;
+                    <h1 class="mt-5 main">About Me</h1>
+                    &nbsp;
+                    <h2>임혁기입니다.</h2>
+                    <p><hr>어렸을때부터 프로그래밍 개발하는 것을 <br>좋아합니다. 게임 음악 영화 보는게 좋습니다. <br> 연락을 윈하시면 하단에 <b><a href="mailto:lhk1506@naver.com">Contect ME!</a> </b> 를 눌러 메일을 보내주세요.</p>
+                </div>
+                <div class="col-3">
+                    <img  src="/static/single_pages/images/img.jpg" class="img-fluid w-100 mt-5"><!-- 3칸짜리 열에 해당하는 부분에 꽉차게 그림 높이가 조정됨 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</section>
+<section id = "Program" class="container">
+    <h2>Program language</h2>
+    <div class = "container">
+        <table class = program-table>
+            <tr>
+                <td class = "program-lang"><b>JAVA</b></td>
+                <td class = "program-content">소스 분석후 코딩 가능함</td>
+            </tr>
+            <tr>
+                <td class = "program-lang"><b>C#</b></td>
+                <td class = "program-content">소스 분석후 코딩 가능함</td>
+            </tr>
+            <tr>
+                <td class = "program-lang"><b>Python</b></td>
+                <td class = "program-content">터틀그래픽과 pygame을 이용하여 프로그램 구현이 가능함.</td>
+            </tr>
+            <tr>
+                <td class = "program-lang"><b>Android Studio</b></td>
+                <td class = "program-content">Java와 xml을 이용하여 간단한 app구현이 가능, API를 앱에 적용할 수 있음.</td>
+            </tr>
+            <tr>
+                <td class = "program-lang"><b>HTML, PHP, JavaScript</b></td>
+                <td class = "program-content">HTML과 PHP연동이 가능하고 MySQL을 이용하여 DB연동까지 해보았음. </td>
+            </tr>
+            <tr>
+                <td class = "program-lang"><b>Unity</b></td>
+                <td class = "program-content">Unity를 이용하여 게임개발 및 수상경력 있음.</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id = "Work" class = "container">
+    <h2>Work</h2>
+    <div id = Work-python>
+        <h3>- Python -</h3>
+        <p>추가예정입니다</p>
+    </div>
+
+    <div id = "Work-pygame">
+        <h3>- Pygame -</h3>
+        <p>파이썬의 pygame을 이용하여 남녀노소 간단하게 즐길수있는 캐주얼게임입니다.</p>
+            <video controls loop muted preload="metadata">
+                <source src="/static/single_pages/Video/jumpy.mp4" type="video/mp4">
+            </video>
+    </div>
+
+    <div id = "Work-html">
+        <h3>- Html -</h3>
+    
+        <p><a href="/static/single_pages/Work/index.html">html 예제</a></p>
+        <p><a href="/static/single_pages/Work/site_make/index.html">드림 제주 예제</a></p>
+        <p><a href="/static/single_pages/Work/siteA/index.html">랜딩페이지 예제</a></p>
+    </div>
+
+    <div id = "Work-unity">
+        <h3>- Unity -</h3>
+        <p>유니티를 이용하여 2D 어드벤처 게임개발을 하였습니다.<br>
+        저는 적 AI부분을 맡아 개발했습니다.</p>
+            <video controls loop muted preload="metadata">
+                <source src="/static/single_pages/Video/strange.mp4" type="video/mp4">    
+            </video>
+    </div>
+    
+
+</section>
+
+<div class="fixed-bottom">
+    {% include 'blog/footer.html' %}
+</div>
+</body>
+</html>

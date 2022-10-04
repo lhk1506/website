@@ -1,0 +1,279 @@
+/* 커스텀 속성 css변수 , 캐스케이드 변수 
+
+커스텀속성 정의하는방법
+-- 커스텀속성명 : 값;*/
+
+:root{
+    --light-blue:#4db1ec;
+    --blue:#1665cc;
+    --purple : #b473bf;
+    --pink : #ffb2C1;
+    --orange:#ff9f67;
+    --yellow:#ffd673;
+    --light-green:#a2e29b;
+    --green:#00a2af;
+    --grey:#333;
+    --white:#FFF;
+}
+
+/* 공통 스타일 */
+
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+    /* 페이지 내 링크를 클릭할때마다 화면이 뜨면 같은 페이지 안에서 이동하는 
+    느낌이 들지 않기때문에 시각적효과를 위해 추가 */
+}
+
+body{
+    color: var(--grey);
+    /* 정의된 커스텀 속성 불러오기 */
+    font-family:sans-serif;
+}
+p{
+    line-height: 1.7;
+}
+img{
+    max-width: 100%;
+}
+#about h2, #news h2, #speakers h2,#ticket h2{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+h1,h2{
+    text-align: center;
+}
+header,h1,h2,.hero-date{
+    font-family: Impact,sans-serif;
+}
+/* 레이아웃 */
+.wrapper{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header{
+    background: var(--grey);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+header.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color:var(--white);
+    font-size: 1.5rem;
+}
+/* hero */
+#hero{
+    background-color: var(--light-blue);
+    background-image: url('../image/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen; /* 배경색과 배경이미지를 설정하고 블렌딩모드로 겹친다. */
+    animation: bg-color 24s infinite;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0 , 100% 0 ,100% 90%,0 100%);
+    /* 마름모 형태로 각꼭지점 찍기 */
+}
+
+@keyframes bg-color{
+    0% {background-color:var(--light-blue);}
+    12.5%{background-color: var(--blue);}
+    25%{background-color: var(--purple);}
+    37.5%{background-color: var(--pink);}
+    50%{background-color: var(--orange);}
+    62.5%{background-color: var(--yellow);}
+    75%{background-color: var(--light-green);}
+    87.5%{background-color: var(--green);}
+    100%{background-color: var(--light-blue);}
+}
+#hero h1{
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+
+}
+.hero-date{
+    text-align: center;
+    border-top: 3px solid var(--grey);
+    border-bottom: 3px solid var(--grey);
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* about */
+#about{
+    padding:  4rem 1rem;
+}
+#about h2{
+    background: linear-gradient(var(--yellow),var(--orange));
+    -webkit-background-clip: text;/* 웹표준이 안되면 실행이안됌 */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color : transparent;
+
+}
+
+#about p{
+    margin-bottom: 2rem;
+}
+
+/* news */
+
+#news{
+    background-image: linear-gradient(var(--light-green),var(--green));
+    padding: 7rem 0;
+    clip-path: polygon(0 0 , 100% 0 ,100% 90%,0 100%);
+}
+#news h2{
+    color: var(--white);
+}
+
+.news-table tr{
+    border-bottom: 1px,solid rgba(255, 255, 255, .5);
+}
+
+.news-table td{
+    display: block;
+    line-height: 1.5;
+}
+.news-date{
+    font-size: .875rem;
+    padding-top: 1rem;
+}
+.news-content{
+    padding-bottom: 1rem;
+}
+/* speakers */
+#speakers{
+    padding: 4rem 1rem;
+}
+.speakers-list{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-bottom:2rem;
+}
+.speakers-text{
+    margin-left: 1rem;
+}
+#speakers h2{
+    background: linear-gradient(var(--light-blue),var(--blue));
+    -webkit-background-clip: text;/* 웹표준이 안되면 실행이안됌 */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color : transparent;
+}
+
+#speakers h3{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+#speakers img{
+    border-radius: 50%;
+    width: 20%;
+}
+
+/* ticket */
+#ticket{
+    background-image: linear-gradient(var(--pink),var(--purple));
+    padding: 6rem 1rem 2rem;
+    clip-path: polygon(0 0 , 100% 0 ,100% 90%,0 100%);
+}
+
+.ticket-form{
+    max-width: 400px;
+    margin: 0 auto 5rem;
+
+}
+.ticket-form label{
+    color:var(--white);
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.ticket-field{
+    background: rgba(255, 255, 255, .6);
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.ticket-btn{
+    background:var(--grey);
+    color: var(--white);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* footer */
+
+.footer{
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: .875rem;
+    color: var(--white);
+}
+
+.footer a{
+    text-decoration: underline;
+}
+
+/* ---------------------------------- */
+
+a:hover,.ticket-btn:hover{
+    transition: .3s;
+}
+a:hover{
+    color:var(--blue)
+}
+.ticket-btn:hover{
+    background: var(--blue);
+}
+.btn-menu{display: none;}
+.main-nav{
+    width: 100%;
+    position: static;
+    display: flex;
+}
+.main-nav li{
+    margin: 0 0 0 1.5rem;
+}
+
+#hero h1{
+    font-size: 6.875rem;
+}
+#hero-date{
+    font-size: 3rem;
+}
+.news-table td {
+    display: table-cell;
+}
+.news-date{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    padding: 1.125rem 0 1rem 1rem;
+}
+.news-content{
+    padding: 1rem 1rem 1rem 0;
+}
+#speakers h2 {
+    margin-bottom: 4rem;
+}
+.speakers-list{
+    margin-bottom: 3rem;
+}
+.speakers-text{
+    margin-left: 2rem;
+}

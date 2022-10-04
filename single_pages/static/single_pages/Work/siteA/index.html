@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WCB Conference(랜딩페이지)</title>
+    <link href="style.css" rel = "stylesheet">
+    <link rel = "stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+</head>
+<body>
+    <header>
+        <div class = "wrapper">
+            <a class = "logo" href="#hero">WCB Conference</a>
+            <nav>
+                <button class = "btn-menu">Menu</button>
+                <ul class="main-nav">
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#news">news</a></li>
+                    <li><a href="#speakers">speakers</a></li>
+                    <li><a href="#ticket">ticket</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id = "hero">
+        <div class = "wrapper">
+            <h1>WCB Conference</h1>
+            <p class="hero-date">2021.11.7.14:00-16:00</p>
+            <p>온라인으로 개최되는 웹사이트 제작설명회, WCB Conference.
+                이번에는 최신 CSS기술과 디자인트랜드를 중심으로 소개합니다.
+                참가비는 무료! 누구든환영합니다.
+            </p>
+            
+        </div>
+    </section>
+    <section id="about" class="wrapper">
+        <h2>About</h2>
+        <p>WCB Conference란 웹사이트를 만드는 법을 배우고 싶으신분들이 모여있는 스터디 커뮤니티입니다.
+            온라인으로 개최되므로 전세계어디에서나 참가할수있습니다. 최신 웹사이트 제작법, 디자닝트랜드를 소개하며 이러한내용에대해 참가자들 간 토론할수있는 시간도 가집니다. 
+            계속 혼자서만 공부하지말고 동료와 교류하며 새로운 가능성을 함께 찾아봅시다.
+        </p>
+        <img src="image/computer.jpg" alt="">
+    </section> 
+    <section id = "news">
+        <h2>News</h2>
+        <div class = "wrapper">
+            <table class = "news-table">
+                <tr>
+                    <td class = "news-date">2021년 10월 16일</td>
+                    <td class = "news-content">참가신청을 시작합니다</td>
+                </tr>
+                <tr>
+                    <td class = "news-date">2021년 10월 10일</td>
+                    <td class = "news-content">WCB Conference 발표자가 결정되었습니다.</td>
+                </tr>
+                <tr>
+                    <td class = "news-date">2021년 10월 2일</td>
+                    <td class = "news-content">WCB Conference의 웹사이트가 리뉴얼 되었습니다.</td>
+                </tr>
+                <tr>
+                    <td class = "news-date">2021년 9월 28일</td>
+                    <td class = "news-content">WCB Conference 개최 결정!</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id ="speakers" class = "wrapper">
+        <h2>Speakers</h2>
+        <div class="speakers-list">
+            <div class="speakers-text">
+                <h3>Mana</h3>
+                <p>일본에서 2년간 그래픽디자이너로 일하다가 캐나다 벤쿠버에있는 웹개발 관련학교를 졸업했습니다.
+                캐나다, 호주, 이탈리아 회사에서 웹디자이너로 일했씁니다 현재 웹사이트를 제작하는법을 가르치는강사로서 교육에 관련된일을 열심히 하고있습니다.
+                </p>
+            </div>
+            <img src="image/mana.jpg" alt="">
+        </div>
+        
+        <div class="speakers-list">
+            <div class="speakers-text">
+                <h3>Tatsuya</h3>
+                <p>주식회사 Sample Web대표, 학생때부터 독학으로 웹사이트 만드는법을 배우고 디자이너가 일하기 좋은 환경을 목표로 독립.
+                    음악,아트관련 웹사이트 제작, 애플리케이션 ㅐㄱ발을 시작으로 이벤트 주최및 발표등을 진행하고있다.
+                </p>
+            </div>
+            <img src="image/tatsuya.jpg" alt="">
+        </div>    
+        
+    </section>
+    <section id = "ticket">
+        <h2>Ticket</h2>
+        <form class = "ticket-form"action="#">
+            <label>Name</label>
+            <input class = "ticket-field" type="text" placeholder="예 : 오오모토 마나미">
+            <label>E-mail</label>
+            <input class = "ticket-field" type="email" placeholder="hello@example.com">
+            <input class = "ticket-btn" type="submit" value="Join Now!">
+
+        </form>
+
+        <div class="footer wrapper">
+            <p>
+                <a href="mailto:info@example.com">문의사항</a>
+                <small>&copy: 2021 WCB Conference</small>
+            </p>
+        </div>
+    </section>
+    
+</body>
+</html>
